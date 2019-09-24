@@ -3,16 +3,17 @@ package com.company;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.SQLOutput;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("------------------------------------------------------------------------------------------------\n"+
-                           "№  | слово                  |           |              Количество информации                    \n" +
-                           "------------------------------------------------------------------------------------------------\n" +
-                           "   |                        |           | кол-во    | байт, размер |     бит,     |   бит,      \n" +
-                           "   |                        | палиндром |  символов | в программе  |  по Хартли   | по Шеннону  \n" +
-                           "------------------------------------------------------------------------------------------------ ");
+        System.out.println("---------------------------------------------------------------------------------------------------------------------------------\n"+
+                           "№   |слово                                                    |           |              Количество информации                    \n" +
+                           "--------------------------------------------------------------------------------------------------------------------------------\n" +
+                           "    |                                                         |           | кол-во    | байт, размер |     бит,     |   бит,      \n" +
+                           "    |                                                         | палиндром |  символов | в программе  |  по Хартли   | по Шеннону  \n" +
+                           "--------------------------------------------------------------------------------------------------------------------------------");
         try(BufferedReader reader = new BufferedReader(new FileReader("input.txt")))
         {
            String line;
@@ -33,6 +34,10 @@ public class Main {
                System.out.printf("%14.2f", Hartly(line));
                System.out.print("|");
                System.out.printf("%14.9f",Shannon(line));
+               System.out.println();
+               System.out.print("----------------------------------------------------------------------------"
+               +"--------------------------------------------------------------");
+               i++;
            }
         }
         catch(IOException ex){
@@ -86,16 +91,19 @@ public class Main {
         return I;
     }
 
-     static double Shannon(String line){
-         double I = 0;
-         int word_length = line.length();
-         for(int i = 0; i < word_length; i++){
-             //double p = new_arr[i] / word_length;
-             //I += p * Math.log10(p) / Math.log10(2);
+     static double Shannon(String line) {
+         int size=line.length();
+
+
+
+         double shannon_val = 0;
+         for (int i = 0; i < size; i++) {
+             double p = line.charAt(i) / size;
+             shannon_val += p * Math.log10(p) / Math.log10(2);
          }
-         I *= (-1);
-         return I;
-        }
+         shannon_val *= (-1);
+         return shannon_val;
+     }
 }
 
 
