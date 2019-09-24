@@ -31,7 +31,7 @@ public class Main {
                System.out.print("|");
                System.out.printf("%14d",ByteSize(line));
                System.out.print("|");
-               System.out.printf("%14.2f", Hartly(line));
+               System.out.printf("%14.2f", Hartley(line));
                System.out.print("|");
                System.out.printf("%14.9f",Shannon(line));
                System.out.println();
@@ -84,7 +84,7 @@ public class Main {
         return size;
     }
 
-    static double Hartly(String line) {
+    static double Hartley(String line) {
         int charsCount = (int) line.chars().distinct().count();//количество различных букв в слове, т.е мощность алфавита
         double I = (Math.log(charsCount) / Math.log(2));
         //log a (b) = log c (b) / log c (a)
@@ -93,9 +93,6 @@ public class Main {
 
      static double Shannon(String line) {
          int size=line.length();
-
-
-
          double shannon_val = 0;
          for (int i = 0; i < size; i++) {
              double p = line.charAt(i) / size;
