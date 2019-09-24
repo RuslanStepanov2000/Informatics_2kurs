@@ -24,12 +24,12 @@ import static java.lang.Math.*;
         public static double f2(double x2) {
             return log10(pow(x2, 2) - 3 * x2 + 2);
         }
-        public static double f3(double x3) {
-            return log10(pow(x3, 2) - 3 * x3 + 2);
-        }
+        public static double f3(double x3) { return log10(pow(x3, 2) - 3 * x3 + 2); }
         public static double f4(double x4) {
             return 0.5 * tan((2 / 3) * (x4 + PI / 4)) - 1;
         }
+
+
 
         public static void Split1(double eps, double a, double b, double c) {
             do {

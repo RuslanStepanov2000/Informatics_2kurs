@@ -43,7 +43,8 @@ import static java.lang.Math.*;
                 }
             }
 
-            System.out.println("Общее "+k);
+            System.out.println("Общее количество отрицательных значений ="+k);
+            System.out.println("Количество отрицательных значений для каждой функции");
             System.out.println("Для y1 "+k1);
             System.out.println("Для y2 "+k2);
             System.out.println("Для y3 "+k3);
@@ -53,7 +54,7 @@ import static java.lang.Math.*;
         }
 
         public static void b2(){
-            System.out.println("Введите кол-во переменных");
+            System.out.println("Введите кол-во разбиейний отрезка ");
             Scanner scn=new Scanner(System.in);
             int i;
             int n=scn.nextInt();
