@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+    <!-- это комментарий -->
+    <contact type="друг" weight = "69">
+        <firstName>Апполоний</firstName>
+        <lastName>Курочкин</lastName>
+        <email>vam@pisem.net</email>
+    </contact>
+    <contact type="коллега" weight = "89">
+        <firstName>Гоша</firstName>
+        <lastName>Победоносец</lastName>
+        <email>geogr@gmail.com</email>
+    </contact>
+    <contact type="однокурсник" weight = "71">
+        <firstName>Bill</firstName>
+        <lastName>Gates</lastName>
+        <email>ms@yandex.ru</email>
+    </contact>
+    <contact type="родич" weight = "59">
+        <firstName>Марк</firstName>
+        <lastName>Бежал</lastName>
+        <email>mb@pic.ru</email>
+    </contact>
+</contacts>

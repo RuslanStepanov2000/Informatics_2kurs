@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><author>
+    <!-- это комментарий -->
+    <author>
+        <firstName>А.С.</firstName>
+        <lastName>Пушкин</lastName>
+
+        <book name="Руслан и людмила" pages="150">
+        </book>
+        <book name="Сказка о рыбаке и рыбке" pages="25">
+        </book>
+    </author>
+    <author>
+        <firstName>Л.Н.</firstName>
+        <lastName>Толстой</lastName>
+
+        <book name="Война и мир" pages="1000">
+        </book>
+    </author>
+<Contact type="???" weight="22"><firstName>A</firstName><lastName>S</lastName><email>2015@er.ru</email></Contact></author>

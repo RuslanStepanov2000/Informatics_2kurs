@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!-- это комментарий -->
+    <author>
+        <contain name="Пушкин А. С.">
+            <book nameBook="Руслан и Людмила" numberOfPage="150"/>
+            <book nameBook="Сказка о рыбаке и рыбке" numberOfPage="25"/>
+        </contain>
+        <contain name="Толстой Л. Н.">
+            <book nameBook="Война и мир" numberOfPage="1000"/>
+        </contain>
+    </author>
