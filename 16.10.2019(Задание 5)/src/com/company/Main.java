@@ -1,14 +1,17 @@
 package com.company;
 
-import jdk.internal.org.xml.sax.Attributes;
-import jdk.internal.org.xml.sax.helpers.DefaultHandler;
+import org.w3c.dom.Node;
+import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Main {
@@ -18,22 +21,43 @@ public class Main {
 
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
+        System.out.println("SAXParserFactory created");
 
-        MyXMLHandler handler = new MyXMLHandler();
-        parser.parse("people.xml", handler);
+        XMLHandler handler = new XMLHandler();
+        File input = new File("people.xml");
+        parser.parse(input, handler);
+        System.out.println("Reading complete");
 
 
-        for (Person person : personList)
-            System.out.println(String.format("Имя : %s, : %s, Пол : %s, Соревнования : %s", person.getName(), person.getBirthday(), person.getSex(), person.getEventList()));
+        for (Person person : personList) {
+            System.out.println(String.format("Имя: %s, Дата рождения: %s, Пол: %s, Соревнования: %s", person.getName(), person.getBirthday(), person.getSex(), person.getEventList()));
+        }
+        System.out.println("Cycle end");
     }
 
-    static class MyXMLHandler extends DefaultHandler {
+    static class XMLHandler extends DefaultHandler {
+        @Override
         public void startElement(String uri, String localName, String qName, Attributes attributes) {
-            if (qName.equals("employee")) {
-                String name = attributes.getValue("name");
-                String birthday = attributes.getValue("birthday");
-                String sex=attributes.getValue("s");
-                personList.add(new Person(name, job));
+            if (qName.equals("sportsman")) {
+                Person thisPerson = new Person();
+                thisPerson.setName(attributes.getValue("name"));
+                thisPerson.setBirthday(attributes.getValue("birthday"));
+                thisPerson.setSex(attributes.getValue("s"));
+
+                List<Event> events = new ArrayList<>();
+                System.out.println("event cycle start");
+                if (qName.equals("event")) {
+                        Event thisEvent = new Event();
+                       // thisEvent.setPlace(attributes.getValue("place"));
+                    thisEvent.setPlace("ibgufondspmfjhbjpofjbpwfomek");
+                    System.out.println(attributes.getValue("place"));
+                        thisEvent.setYear(Integer.parseInt(attributes.getValue("yaer")));
+                    System.out.println(attributes.getValue("yaer"));
+                        events.add(thisEvent);
+                }
+                System.out.println("event cycle end");
+                thisPerson.setEventList(events);
+                personList.add(thisPerson);
             }
         }
     }
