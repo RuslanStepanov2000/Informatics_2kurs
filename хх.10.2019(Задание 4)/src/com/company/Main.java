@@ -25,5 +25,11 @@ public class Main {
         regex.isGUID("e02fd0e400fd090Aca300d00a0038ba0");
         System.out.println();
 
+        //е
+        System.out.println(regex.isColorHTML("#FFF12F"));
+        System.out.println();
+
+        //ж
+            regex.folderAddress("C:\\Users\\stiwe\\Desktop\\Учеба\\инфа\\хх.10.2019(Задание 4)");
     }
 }

@@ -90,6 +90,37 @@ public class Methods {
         if (matcher.find()) System.out.println("строка " + str + "\n Является GUID");
         else System.out.println("строка " + str + "\n НЕ является GUID");
     }
-    
+
+    public boolean isColorHTML(String str) {
+        if (str.charAt(0) == '#' && numberColorHTML(str.substring(1, str.length() - 1)) && str.length() == 7) {
+            System.out.println("Код цвета написан праивльно");
+            return true;
+        }
+        return false;
+    }
+    private boolean numberColorHTML(String str) {
+        return str.matches("^[0-9A-F]+$");
+
+    }
+
+    public void folderAddress(String str) {
+        str=str.replace("\\", "/");
+        System.out.println(str);
+
+
+        Pattern pattern = Pattern.compile("/");
+        //Pattern pattern = Pattern.compile("");
+        Matcher matcher = pattern.matcher(str);
+
+        ArrayList<String> arrayList=new ArrayList<>();
+        System.out.println("Working");
+
+        while (matcher.find()) {
+            arrayList.add(matcher.group());
+        }
+        for (String s:arrayList){
+            System.out.println(s+" ");
+        }
+    }
 
 }

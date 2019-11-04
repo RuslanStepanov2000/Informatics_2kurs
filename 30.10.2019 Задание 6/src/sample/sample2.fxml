@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="click" layoutX="136.0" layoutY="277.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="304.0" text="РЕШИТЬ!!!!!" />
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="52.0" prefWidth="365.0" text="Уравнение вида ax^2+bх+c=0" AnchorPane.bottomAnchor="471.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="344.0" AnchorPane.topAnchor="14.0" />
+      <Label layoutX="14.0" layoutY="91.0" prefHeight="26.0" prefWidth="121.0" text="Коэффициент а" />
+      <Label layoutX="14.0" layoutY="128.0" prefHeight="26.0" prefWidth="121.0" text="Коэффициент b" />
+      <Label layoutX="14.0" layoutY="173.0" prefHeight="26.0" prefWidth="121.0" text="Коэффициент c" />
+      <Label layoutX="24.0" layoutY="243.0" prefHeight="34.0" prefWidth="81.0" text="ОТВЕТЫ!!!" />
+      <Label layoutX="106.0" layoutY="243.0" prefHeight="34.0" prefWidth="158.0" />
+      <TextField fx:id="aInput" layoutX="136.0" layoutY="91.0" />
+      <TextField fx:id="bInput" layoutX="136.0" layoutY="128.0" />
+      <TextField fx:id="cInput" layoutX="136.0" layoutY="173.0" />
+   </children>
+</AnchorPane>
