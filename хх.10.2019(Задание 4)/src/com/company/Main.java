@@ -31,5 +31,9 @@ public class Main {
 
         //ж
             regex.folderAddress("C:\\Users\\stiwe\\Desktop\\Учеба\\инфа\\хх.10.2019(Задание 4)");
+        //з
+        regex.deleteSuffix("столик, домик, икра");
+        //и
+        regex.currency("25.15 RUR,qwrty 0.15 EU");
     }
 }

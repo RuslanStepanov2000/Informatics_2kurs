@@ -123,4 +123,48 @@ public class Methods {
         }
     }
 
+    public void deleteSuffix(String str) {
+        Pattern pattern=Pattern.compile("ик( |,|\\.|:|;|$)");
+        Matcher matcher=pattern.matcher(str);
+        String s=matcher.replaceAll("");
+        System.out.println(s);
+    }
+
+    public void currency(String str) {Pattern pattern=Pattern.compile("\\d+(,|\\.)\\d+ (USD|RUR|EU)");
+        Matcher matcher=pattern.matcher(str);
+
+        Pattern dob=Pattern.compile("\\d+(,|\\.)\\d+");
+        ArrayList<Double> USD=new ArrayList<>();
+        ArrayList<Double> RUR=new ArrayList<>();
+        ArrayList<Double> EU=new ArrayList<>();
+
+        ArrayList<String> strings=new ArrayList<>();
+        while(matcher.find()){
+            strings.add(matcher.group());
+        }
+
+        for (String s:strings){
+            Matcher matc=dob.matcher(s);
+            String s1 = s.substring(s.length() - 3, s.length());
+            if (s1.equals("ESD")){
+                while (matc.find()){
+                    USD.add(Double.parseDouble(matc.group()));
+                }
+            }
+            if (s1.equals("RUR")){
+                while (matc.find()){
+                    RUR.add(Double.parseDouble(matc.group()));
+                }
+            }
+            if (s1.equals(" EU")){
+                while (matc.find()){
+                    EU.add(Double.parseDouble(matc.group()));
+                }
+            }
+        }
+        for (double a:RUR){
+            System.out.println(a);
+        }
+    }
+    }
 }
