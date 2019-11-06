@@ -1,0 +1,22 @@
+CREATE TABLE `odnotalichnaya`.`new_table12` () 
+//Сздание новой таблицы в базе данных
+
+
+ADD COLUMN `Имя стобца` VARCHAR(45) NOT NULL DEFAULT 'Значение по умолчанию' AFTER `email`; 
+//Добавление поля
+
+
+INSERT INTO `odnotalichnaya`.`new_table` (`client_code`, `name`, `country`, `city`, `adress`) VALUES ('6', 'длфывл', 'ыьфжд', 'ждбвфы', 'ддхдвзфы');
+ //Добавление объекта в базу данных, затем указывается таблица, в скобках поля, после VALUES значения соответствующих полей
+
+
+DELETE FROM `odnotalichnaya`.`new_table` WHERE (`client_code` = '6');
+ //удаление строки полностью
+
+
+UPDATE `odnotalichnaya`.`new_table` SET `email` = '' WHERE (`client_code` = '6');
+ //Заполнение отдельных параметров
+
+
+SELECT * FROM odnotalichnaya.new_table;
+//Вывод БД на экран
