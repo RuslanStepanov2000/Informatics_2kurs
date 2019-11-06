@@ -65,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1615" />
@@ -108,7 +108,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571813881353" />
     <property name="last.edited.regexp" value="Asds" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../16.10.2019(Задание 5)" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -171,16 +171,15 @@
       <workItem from="1571809410292" duration="4498000" />
       <workItem from="1571814709419" duration="1562000" />
       <workItem from="1572419840147" duration="66000" />
-      <workItem from="1573025311029" duration="261000" />
+      <workItem from="1573025311029" duration="388000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18592000" />
+    <option name="totallyTimeSpent" value="18719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15591398" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

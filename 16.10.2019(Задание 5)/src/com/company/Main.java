@@ -1,6 +1,7 @@
 package com.company;
 
-import org.w3c.dom.Node;
+
+import jdk.nashorn.internal.parser.JSONParser;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -45,17 +46,15 @@ public class Main {
                 thisPerson.setSex(attributes.getValue("s"));
 
                 List<Event> events = new ArrayList<>();
-                System.out.println("event cycle start");
                 if (qName.equals("event")) {
                         Event thisEvent = new Event();
-                       // thisEvent.setPlace(attributes.getValue("place"));
+                        thisEvent.setPlace(attributes.getValue("place"));
                     thisEvent.setPlace("ibgufondspmfjhbjpofjbpwfomek");
                     System.out.println(attributes.getValue("place"));
                         thisEvent.setYear(Integer.parseInt(attributes.getValue("yaer")));
                     System.out.println(attributes.getValue("yaer"));
                         events.add(thisEvent);
                 }
-                System.out.println("event cycle end");
                 thisPerson.setEventList(events);
                 personList.add(thisPerson);
             }
