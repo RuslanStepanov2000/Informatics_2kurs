@@ -11,8 +11,12 @@ public class DataManager {
     //Чтение первоначального файла
     public void readInput(File inputFile){
         String extension=inputExtension(inputFile.getName());
-        if extension
+        if (extension=="txt"){
 
+        }
+        else{
+
+        }
     }
     private String inputExtension(String fileName){
         /**
