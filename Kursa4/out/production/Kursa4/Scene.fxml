@@ -9,23 +9,32 @@
 
 <AnchorPane id="AnchorPane" fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="801.0" style="-fx-background-color: #e870cb;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
-      <Button id="registerButton" fx:id="RegisterButton" layoutX="273.0" layoutY="308.0" mnemonicParsing="false" onAction="#actionRegisterButton" onMouseClicked="#initialize" prefHeight="121.0" prefWidth="291.0" text="Register">
+      <Button id="loginButton" fx:id="LoginButton" layoutX="237.0" layoutY="160.0" mnemonicParsing="false" onAction="#actionLoginButton" onMouseClicked="#initialize" prefHeight="121.0" prefWidth="291.0" text="Login">
          <font>
             <Font name="System Bold Italic" size="40.0" />
          </font>
       </Button>
-      <Button id="loginButton" fx:id="LoginButton" layoutX="273.0" layoutY="186.0" mnemonicParsing="false" onAction="#actionLoginButton" onMouseClicked="#initialize" prefHeight="121.0" prefWidth="291.0" text="Login">
+      <Button id="registerButton" fx:id="RegisterButton" layoutX="237.0" layoutY="282.0" mnemonicParsing="false" onAction="#actionRegisterButton" onMouseClicked="#initialize" prefHeight="121.0" prefWidth="291.0" text="Register">
          <font>
             <Font name="System Bold Italic" size="40.0" />
          </font>
       </Button>
-      <Pane fx:id="registerWindow" layoutX="255.0" layoutY="137.0" prefHeight="327.0" prefWidth="326.0" style="-fx-background-color: #e0e0e0;" visible="false">
+      <Pane id="registerPane" fx:id="registerWindow" layoutX="237.0" layoutY="118.0" prefHeight="327.0" prefWidth="326.0" style="-fx-background-color: #e0e0e0;" visible="false">
          <children>
             <TextField fx:id="registerName" layoutX="87.0" layoutY="53.0" promptText="Введите имя" />
             <TextField fx:id="registerSurname" layoutX="87.0" layoutY="89.0" promptText="Введите фамилию" />
             <PasswordField fx:id="registerPassword" layoutX="87.0" layoutY="159.0" onAction="#loginButton" promptText="Придумайте пароль" />
             <TextField fx:id="registerLogin" layoutX="87.0" layoutY="123.0" promptText="Придумайте логин" />
-            <Button fx:id="buttonRegisterComplete" layoutX="76.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#buttonRegisterComplete" prefHeight="32.0" prefWidth="174.0" text="Зарегистрирвоаться" />
+            <Button fx:id="buttonBackRegistration" layoutX="121.0" layoutY="255.0" mnemonicParsing="false" onMouseClicked="#buttonBackRegistration" prefHeight="32.0" prefWidth="83.0" text="Назад" />
+            <Button fx:id="buttonRegisterComplete" layoutX="76.0" layoutY="216.0" mnemonicParsing="false" onMouseClicked="#buttonRegisterComplete" prefHeight="32.0" prefWidth="174.0" text="Зарегистрирвоаться" />
+         </children>
+      </Pane>
+      <Pane fx:id="loginWindow" layoutX="237.0" layoutY="118.0" prefHeight="327.0" prefWidth="326.0" style="-fx-background-color: #e0e0e0;" visible="false">
+         <children>
+            <PasswordField fx:id="loginPassword" layoutX="87.0" layoutY="159.0" onAction="#loginButton" promptText="Введиет пароль" />
+            <TextField fx:id="loginLogin" layoutX="87.0" layoutY="123.0" promptText="Введите логин" />
+            <Button fx:id="buttonBackLogin" layoutX="121.0" layoutY="255.0" mnemonicParsing="false" onMouseClicked="#buttonBackLogin" prefHeight="32.0" prefWidth="83.0" text="Назад" />
+            <Button fx:id="buttonLoginComplete" layoutX="76.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#buttonLoginComplete" prefHeight="32.0" prefWidth="174.0" text="Войти" />
          </children>
       </Pane>
    </children>

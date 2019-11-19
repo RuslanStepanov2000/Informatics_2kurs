@@ -9,6 +9,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Kursa4$Main.ic" NAME="Main Coverage Results" MODIFIED="1573724513287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="209" />
+  </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_DATA_SOURCES" value="true" />
@@ -23,18 +32,32 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@UsersDatabase" type="feb32156:DbDataSourceImpl" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@UsersDatabase" type="feb32156:DbDataSourceImpl" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@UsersDatabase" type="feb32156:DbDataSourceImpl" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="odnotalichnaya: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="kursa4: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="kursa4: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="kursa4: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="user_settings: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -44,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="28" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,12 +80,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Visualization.java">
+        <entry file="file://$PROJECT_DIR$/src/Scene.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" selection-start-column="26" selection-end-column="26" />
+            <state relative-caret-position="595">
+              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
             </state>
           </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -79,20 +103,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Scene.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+            <state relative-caret-position="918">
+              <caret line="69" column="61" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,6 +159,9 @@
       <find>registerWindow</find>
       <find>register</find>
       <find>Complete</find>
+      <find>Pane</find>
+      <find>loginPane</find>
+      <find>buttonBack</find>
     </findStrings>
     <replaceStrings>
       <replace>registerWindow</replace>
@@ -159,10 +176,12 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e5b8cc12-544a-4276-a7e8-878b4bff151f/console.sql" />
         <option value="$PROJECT_DIR$/src/Perceptron.java" />
         <option value="$PROJECT_DIR$/src/DataManager.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/User.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Scene.fxml" />
         <option value="$PROJECT_DIR$/src/Controller.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3d0b9e28-a349-4cd8-8fbf-bb570d223b99/console.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9db909ac-ba22-4c48-952c-5042e9ccad6c/console.sql" />
       </list>
     </option>
   </component>
@@ -190,8 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,22 +225,19 @@
               <item name="Kursa4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
-            <path>
-              <item name="Kursa4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573639712954" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573725925348" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -231,7 +245,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -277,12 +291,17 @@
       <workItem from="1573198069806" duration="189000" />
       <workItem from="1573198277330" duration="3994000" />
       <workItem from="1573629616193" duration="4352000" />
-      <workItem from="1573637340417" duration="2440000" />
+      <workItem from="1573637340417" duration="3633000" />
+      <workItem from="1573641037484" duration="435000" />
+      <workItem from="1573721407309" duration="4318000" />
+      <workItem from="1574068075541" duration="5111000" />
+      <workItem from="1574150385249" duration="282000" />
+      <workItem from="1574151213121" duration="965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19202000" />
+    <option name="totallyTimeSpent" value="31506000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -295,9 +314,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49857953" visible="true" weight="0.2795699" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49857953" visible="true" weight="0.21169356" />
       <window_info id="Structure" order="1" sideWeight="0.50142044" side_tool="true" weight="0.25672042" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -306,8 +324,8 @@
       <window_info id="Favorites" order="6" sideWeight="0.50142044" side_tool="true" weight="0.25672042" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32954547" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32954547" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39914772" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32954547" />
@@ -316,21 +334,26 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32954547" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32954547" />
+      <window_info anchor="bottom" id="Database Console" order="12" visible="true" weight="0.32954547" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32954547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" weight="0.3295302" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.3293011" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.3293011" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32997313" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../18.09.2019(Задание 1)/src/com/company/Main.java">
@@ -354,19 +377,8 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e5b8cc12-544a-4276-a7e8-878b4bff151f/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://3d0b9e28-a349-4cd8-8fbf-bb570d223b99/collation/cp1250_polish_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://3d0b9e28-a349-4cd8-8fbf-bb570d223b99/collation/ascii_bin">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://3d0b9e28-a349-4cd8-8fbf-bb570d223b99/schema/odnotalichnaya/table/new_table">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://3d0b9e28-a349-4cd8-8fbf-bb570d223b99/collation/cp1250_polish_ci" />
+    <entry file="das://3d0b9e28-a349-4cd8-8fbf-bb570d223b99/collation/ascii_bin" />
     <entry file="file://$PROJECT_DIR$/../хх.10.2019(Задание 4)/src/com/company/Methods.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -418,15 +430,150 @@
     <entry file="file://$PROJECT_DIR$/src/Perceptron.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-565">
+          <caret line="1583" column="33" selection-start-line="1583" selection-start-column="33" selection-end-line="1583" selection-end-column="33" />
+          <folding>
+            <element signature="e#48219#48220#0" expanded="true" />
+            <element signature="e#48263#48264#0" expanded="true" />
+            <element signature="e#65270#65271#0" expanded="true" />
+            <element signature="e#65330#65331#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StartScene.fxml" />
+    <entry file="das://3d0b9e28-a349-4cd8-8fbf-bb570d223b99/collation/armscii8_bin" />
+    <entry file="das://3d0b9e28-a349-4cd8-8fbf-bb570d223b99/schema/odnotalichnaya/table/new_table/index/client_code_UNIQUE" />
+    <entry file="das://3d0b9e28-a349-4cd8-8fbf-bb570d223b99/schema/odnotalichnaya/table/new_table" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/extensions/com.intellij.database/schema/Generate POJOs.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-704">
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3d0b9e28-a349-4cd8-8fbf-bb570d223b99/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09d46c2-34dd-46e7-9999-96a1d8fc6711/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Visualization.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
         </state>
       </provider>
+    </entry>
+    <entry file="uml://DATABASE/c09d46c2-34dd-46e7-9999-96a1d8fc6711">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>c09d46c2-34dd-46e7-9999-96a1d8fc6711</OriginalElement>
+          <nodes>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.TABLE_PRIVILEGES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_INDEXES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.TRIGGERS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_METRICS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_FT_CONFIG</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.PARAMETERS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_CMPMEM_RESET</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.ST_UNITS_OF_MEASURE</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_TRX</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.KEYWORDS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.EVENTS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.RESOURCE_GROUPS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_FT_BEING_DELETED</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.ST_SPATIAL_REFERENCE_SYSTEMS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_FIELDS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.TABLES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_CMPMEM</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_SESSION_TEMP_TABLESPACES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_TABLESPACES_BRIEF</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_CACHED_INDEXES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_BUFFER_POOL_STATS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.VIEW_ROUTINE_USAGE</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.COLUMN_PRIVILEGES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_FT_DELETED</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.PLUGINS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.OPTIMIZER_TRACE</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.USER_PRIVILEGES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_CMP</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.TABLESPACES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_VIRTUAL</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.COLUMNS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.STATISTICS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_TABLES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.VIEWS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_FT_INDEX_TABLE</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_FT_INDEX_CACHE</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_BUFFER_PAGE_LRU</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.COLLATIONS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.TABLE_CONSTRAINTS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.SCHEMA_PRIVILEGES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_TABLESPACES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_CMP_PER_INDEX</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.PROCESSLIST</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_TABLESTATS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.KEY_COLUMN_USAGE</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_DATAFILES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.PARTITIONS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_CMP_PER_INDEX_RESET</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.CHECK_CONSTRAINTS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.COLLATION_CHARACTER_SET_APPLICABILITY</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.CHARACTER_SETS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_FOREIGN</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.ENGINES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.COLUMN_STATISTICS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_TEMP_TABLE_INFO</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.ROUTINES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.VIEW_TABLE_USAGE</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_CMP_RESET</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_FOREIGN_COLS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.SCHEMATA</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.REFERENTIAL_CONSTRAINTS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.FILES</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.ST_GEOMETRY_COLUMNS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.PROFILING</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_COLUMNS</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_FT_DEFAULT_STOPWORD</node>
+            <node x="" y="">c09d46c2-34dd-46e7-9999-96a1d8fc6711.VIEW:information_schema.INNODB_BUFFER_PAGE</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8011776015380917" x="1928.0" y="1124.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c09d46c2-34dd-46e7-9999-96a1d8fc6711/schema/information_schema/view/CHARACTER_SETS" />
+    <entry file="das://9db909ac-ba22-4c48-952c-5042e9ccad6c/schema/kursa4/table/user_settings">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scene.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataManager.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -435,6 +582,16 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#inputExtension#0;class#DataManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="69" column="61" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -467,41 +624,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://9db909ac-ba22-4c48-952c-5042e9ccad6c/schema/kursa4/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9db909ac-ba22-4c48-952c-5042e9ccad6c/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="28" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-565">
-          <caret line="1583" column="33" selection-start-line="1583" selection-start-column="33" selection-end-line="1583" selection-end-column="33" />
-          <folding>
-            <element signature="e#48219#48220#0" expanded="true" />
-            <element signature="e#48263#48264#0" expanded="true" />
-            <element signature="e#65270#65271#0" expanded="true" />
-            <element signature="e#65330#65331#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scene.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

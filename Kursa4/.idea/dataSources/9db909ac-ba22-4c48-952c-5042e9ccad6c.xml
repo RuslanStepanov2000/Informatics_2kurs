@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="@UsersDatabase">
+<dataSource name="@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.14">
     <root id="1">
       <ServerVersion>8.0.18</ServerVersion>
@@ -11,11 +11,11 @@
       <Current>1</Current>
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="3" parent="1" name="mysql">
+    <schema id="3" parent="1" name="kursa4">
+      <Visible>1</Visible>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </schema>
-    <schema id="4" parent="1" name="odnotalichnaya">
-      <Visible>1</Visible>
+    <schema id="4" parent="1" name="mysql">
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </schema>
     <schema id="5" parent="1" name="performance_schema">
@@ -1118,67 +1118,36 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="281" parent="4" name="new_table"/>
-    <column id="282" parent="281" name="client_code">
+    <table id="281" parent="3" name="user"/>
+    <table id="282" parent="3" name="user_settings"/>
+    <column id="283" parent="281" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="281" name="name">
+    <column id="284" parent="281" name="user_login">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>&apos;name&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="281" name="country">
+    <column id="285" parent="281" name="user_password">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>&apos;county&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="281" name="city">
-      <Position>4</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;city&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="286" parent="281" name="adress">
-      <Position>5</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;adress&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="287" parent="281" name="phone">
-      <Position>6</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;phone&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="288" parent="281" name="email">
-      <Position>7</Position>
-      <DataType>varchar(55)|0s</DataType>
-      <DefaultExpression>&apos;mail&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="289" parent="281" name="client_code_UNIQUE">
-      <ColNames>client_code</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <key id="290" parent="281" name="PRIMARY">
+    <key id="286" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>client_code</ColNames>
+      <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="291" parent="281" name="client_code_UNIQUE">
-      <ColNames>client_code</ColNames>
-      <UnderlyingIndexName>client_code_UNIQUE</UnderlyingIndexName>
-    </key>
+    <column id="287" parent="282" name="user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
   </database-model>
 </dataSource>

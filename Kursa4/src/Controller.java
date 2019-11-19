@@ -6,8 +6,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 
 public class Controller {
 
@@ -16,6 +14,15 @@ public class Controller {
 
     @FXML
     private Pane registerWindow;
+
+    @FXML
+    private Pane loginWindow;
+
+    @FXML
+    public Button buttonBackRegistration;
+
+    @FXML
+    public Button buttonBackLogin;
 
     @FXML
     private Button buttonRegisterComplete;
@@ -32,6 +39,7 @@ public class Controller {
     @FXML
     private TextField registerLogin;
 
+
     @FXML
     private Button RegisterButton;
 
@@ -40,22 +48,32 @@ public class Controller {
 
     @FXML
     void actionLoginButton(ActionEvent event) {
-
+        loginWindow.setVisible(true);
     }
 
     @FXML
     void actionRegisterButton(ActionEvent event) {
-        RegisterButton.setVisible(false);
-        LoginButton.setVisible(false);
         registerWindow.setVisible(true);
     }
 
     @FXML
     void buttonRegisterComplete(MouseEvent  event) {
         registerWindow.setVisible(false);
-        RegisterButton.setVisible(true);
-        LoginButton.setVisible(true);
+    }
+    @FXML
+    void buttonLoginComplete(MouseEvent  event) {
+        registerWindow.setVisible(false);
+    }
 
+    @FXML
+    void buttonBackRegistration(MouseEvent mouseEvent) {
+        buttonBackRegistration.getParent().setVisible(false);
+
+    }
+
+    @FXML
+    void buttonBackLogin(MouseEvent mouseEvent) {
+        buttonBackLogin.getParent().setVisible(false);
     }
 
     @FXML
