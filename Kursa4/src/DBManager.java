@@ -44,7 +44,7 @@ public class DBManager {
         conn.close();
     }
 
-    void userLogin(User user) throws SQLException {
+    public void userLogin(User user) throws SQLException {
         /**
          * Метод авторизации пользователей. Соедеиняется с БД, сравнивает поля user'a с данными БД
          * @param user объект класса юзер, с полями логин и пароль
@@ -52,17 +52,25 @@ public class DBManager {
          *         Если пользователь найден в базе, открывается рабочее пространство WorkingSpace.fxml и в объект user передаются настройки
          *         пользователя и местонахождение его локальных данных
          */
-        String login=user.getLogin();
-        String pass=user.getPassword();
-        dbConnection();
-        String sql = "SELECT * FROM kursa4.user (user_login, user_password) Values (?, ?)";
-        PreparedStatement statement=getConn().prepareStatement(sql);
-        statement.setString(1, login);
-        statement.setString(2, pass);
-        statement.executeUpdate();
+        String sql = "select user " +
+                "FROM kursa4.user " +
+                "where user_login=? and user_password=?";
+        PreparedStatement statement = getConn().prepareStatement(sql);
+        statement.setString(1,user.getLogin());
+        statement.setString(2,user.getPassword());
+        ResultSet rs = statement.executeQuery();
+        //В случае ошибки
+        if (rs.next()){
+            user.setUserid(rs.getInt(1));
+            System.out.println(rs.getString(2)+"   "+rs.getString(3));
+        }
+        else {
+            //какая-то ошибка и чего то там сделать
+            System.out.println("ОНА ТЕБЯ СОЖРЕТ ПАРОЛЬ НЕВЕРНЫЙ");
+        }
+        conn.close();
 
     }
-
 
 }
 

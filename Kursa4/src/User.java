@@ -8,6 +8,16 @@ public class User {
     private String name;
     private String surname;
 
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
+    }
+
+    private int userid;
+
     public String getLogin() {
         return login;
     }
