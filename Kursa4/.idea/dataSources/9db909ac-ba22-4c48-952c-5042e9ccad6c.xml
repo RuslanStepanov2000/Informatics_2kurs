@@ -1119,35 +1119,67 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="281" parent="3" name="user"/>
-    <table id="282" parent="3" name="user_settings"/>
-    <column id="283" parent="281" name="user_id">
+    <column id="282" parent="281" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="281" name="user_login">
+    <column id="283" parent="281" name="user_login">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="281" name="user_password">
+    <column id="284" parent="281" name="user_password">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="286" parent="281" name="PRIMARY">
+    <column id="285" parent="281" name="user_setting1">
+      <Position>4</Position>
+      <DataType>tinyint(4)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="286" parent="281" name="user_setting2">
+      <Position>5</Position>
+      <DataType>tinyint(4)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="287" parent="281" name="user_id_UNIQUE">
+      <ColNames>user_id</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="288" parent="281" name="user_login_UNIQUE">
+      <ColNames>user_login</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="289" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="287" parent="282" name="user_id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
+    <key id="290" parent="281" name="user_id_UNIQUE">
+      <ColNames>user_id</ColNames>
+      <UnderlyingIndexName>user_id_UNIQUE</UnderlyingIndexName>
+    </key>
+    <key id="291" parent="281" name="user_login_UNIQUE">
+      <ColNames>user_login</ColNames>
+      <UnderlyingIndexName>user_login_UNIQUE</UnderlyingIndexName>
+    </key>
+    <foreign-key id="292" parent="281" name="id_export">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>kursa4</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>user_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
   </database-model>
 </dataSource>

@@ -1,4 +1,7 @@
 public class User {
+    /**
+     * Класс пользователя, в ктором содержится вся информация,  в т.ч и его настройки
+     */
     private String login;
     private String password;
     private String sex;

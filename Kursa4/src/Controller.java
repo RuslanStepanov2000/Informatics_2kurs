@@ -1,19 +1,23 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
+import java.sql.SQLException;
+
 public class Controller {
+
+    @FXML
+    private Label zapolnite_polya;
 
     @FXML
     private AnchorPane AnchorPane;
 
     @FXML
     private Pane registerWindow;
+
 
     @FXML
     private Pane loginWindow;
@@ -36,6 +40,7 @@ public class Controller {
     @FXML
     private PasswordField registerPassword;
 
+
     @FXML
     private TextField registerLogin;
 
@@ -45,6 +50,9 @@ public class Controller {
 
     @FXML
     private Button LoginButton;
+
+    @FXML
+    private DialogPane dialogPane_errorRegister;
 
     @FXML
     void actionLoginButton(ActionEvent event) {
@@ -57,8 +65,22 @@ public class Controller {
     }
 
     @FXML
-    void buttonRegisterComplete(MouseEvent  event) {
-        registerWindow.setVisible(false);
+    void buttonRegisterComplete(MouseEvent  event) throws SQLException {
+        if (registerName.getText().isEmpty()|registerSurname.getText().isEmpty()|registerLogin.getText().isEmpty()|registerPassword.getText().isEmpty()){
+            zapolnite_polya.setVisible(true);
+        }
+        else {
+            zapolnite_polya.setVisible(false);
+            User user = new User();
+            user.setName(registerName.getText());
+            user.setSurname(registerSurname.getText());
+            user.setLogin(registerLogin.getText());
+            user.setPassword(registerPassword.getText());
+            new DBManager().newuserPush(user);
+            registerWindow.setVisible(false);
+        }
+
+
     }
     @FXML
     void buttonLoginComplete(MouseEvent  event) {
@@ -68,6 +90,7 @@ public class Controller {
     @FXML
     void buttonBackRegistration(MouseEvent mouseEvent) {
         buttonBackRegistration.getParent().setVisible(false);
+        zapolnite_polya.setVisible(false);
 
     }
 
