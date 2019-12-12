@@ -1,10 +1,16 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class Controller {
@@ -18,7 +24,6 @@ public class Controller {
     @FXML
     private Pane registerWindow;
 
-
     @FXML
     private Pane loginWindow;
 
@@ -29,7 +34,13 @@ public class Controller {
     public Button buttonBackLogin;
 
     @FXML
-    private Button buttonRegisterComplete;
+    public static Button buttonRegisterComplete;
+
+    @FXML
+    private TextField loginLogin;
+
+    @FXML
+    private PasswordField loginPassword ;
 
     @FXML
     private TextField registerName;
@@ -40,10 +51,8 @@ public class Controller {
     @FXML
     private PasswordField registerPassword;
 
-
     @FXML
     private TextField registerLogin;
-
 
     @FXML
     private Button RegisterButton;
@@ -82,9 +91,34 @@ public class Controller {
 
 
     }
+
     @FXML
-    void buttonLoginComplete(MouseEvent  event) {
-        registerWindow.setVisible(false);
+    void buttonLoginComplete(MouseEvent  event) throws SQLException {
+        User user=new User();
+        DBManager dbm=new DBManager();
+        user.setLogin(loginLogin.getText());
+        user.setPassword(loginPassword.getText());
+
+        if (dbm.userLogin(user)) {
+            Node source = (Node) event.getSource();
+            Stage stageThis = (Stage) source.getScene().getWindow();
+            stageThis.close();
+
+            Stage stage = new Stage();
+            Parent root = null;
+            try {
+                root = FXMLLoader.load(getClass().getResource("WorkingSpace.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            stage.setScene(new Scene(root));
+            stage.setResizable(true);
+            stage.setTitle("Analyses of stocks");
+            stage.show();
+
+            buttonBackLogin.getParent().setVisible(false);
+            registerWindow.setVisible(false);
+        }
     }
 
     @FXML
@@ -96,7 +130,8 @@ public class Controller {
 
     @FXML
     void buttonBackLogin(MouseEvent mouseEvent) {
-        buttonBackLogin.getParent().setVisible(false);
+        loginWindow.setVisible(false);
+
     }
 
     @FXML
@@ -106,7 +141,6 @@ public class Controller {
 
     @FXML
     void loginButton(ActionEvent event) {
-
     }
 
 }

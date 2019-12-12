@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class User {
     /**
      * Класс пользователя, в ктором содержится вся информация,  в т.ч и его настройки
@@ -7,6 +9,51 @@ public class User {
     private String sex;
     private String name;
     private String surname;
+    private String filePath;
+    private Date dateLogin;
+    private Date dateExit;
+    private boolean result;
+    private int resultNumeric;
+
+    public Date getDateLogin() {
+        return dateLogin;
+    }
+
+    public void setDateLogin(Date dateLogin) {
+        this.dateLogin = dateLogin;
+    }
+
+    public Date getDateExit() {
+        return dateExit;
+    }
+
+    public void setDateExit(Date dateExit) {
+        this.dateExit = dateExit;
+    }
+
+    public boolean isResult() {
+        return result;
+    }
+
+    public void setResult(boolean result) {
+        this.result = result;
+    }
+
+    public int getResultNumeric() {
+        return resultNumeric;
+    }
+
+    public void setResultNumeric(int resultNumeric) {
+        this.resultNumeric = resultNumeric;
+    }
+
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
 
     public int getUserid() {
         return userid;
