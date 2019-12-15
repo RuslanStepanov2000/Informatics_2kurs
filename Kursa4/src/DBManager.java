@@ -84,7 +84,7 @@ public class DBManager extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Scene root2 = new Scene(FXMLLoader.load(getClass().getResource("WorkingSpace.fxml")));
+        Scene root2 = new Scene(FXMLLoader.load(getClass().getResource("workingSpace/WorkingSpace.fxml")));
         primaryStage.setScene(root2);
         primaryStage.setTitle("Analyses of stocks");
         primaryStage.show();

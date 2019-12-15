@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPaneWorkingSpace" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="824.0" style="-fx-border-color: #8573de; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerWorkingSpace">
+   <children>
+      <LineChart fx:id="graph1" layoutX="14.0" layoutY="55.0" prefHeight="274.0" prefWidth="456.0" title="График 1" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="20.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </LineChart>
+      <Button id="buttonOpenFile" fx:id="OpenFile" layoutX="12.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#OpenFile" style="-fx-background-color: #aaaaaa;" text="Открыть файл" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Button fx:id="SaveButton" layoutX="132.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: #aaaaaa;" text="Сохранить" AnchorPane.topAnchor="5.0" />
+      <Button fx:id="buttonExit" layoutX="853.0" layoutY="11.0" mnemonicParsing="false" text="Выход" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Button fx:id="buttonChangeUser" layoutX="679.0" layoutY="11.0" mnemonicParsing="false" text="Сменить пользовтеля" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="10.0" />
+      <AnchorPane layoutX="504.0" layoutY="68.0" prefHeight="234.0" prefWidth="230.0" style="-fx-background-color: #dddddd;" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="55.0">
+         <children>
+            <DatePicker layoutX="9.0" layoutY="-7.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0" />
+            <DatePicker layoutX="9.0" layoutY="18.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0" />
+            <SplitMenuButton fx:id="SplitMenuTimeGraph" layoutX="29.0" layoutY="68.0" mnemonicParsing="false" text="Временной промежуток" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="71.0">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="1h" />
+                  <MenuItem mnemonicParsing="false" text="2h" />
+                  <MenuItem mnemonicParsing="false" text="6h" />
+               </items>
+            </SplitMenuButton>
+            <ComboBox fx:id="comboType" layoutX="22.0" layoutY="97.0" prefHeight="26.0" prefWidth="175.0" promptText="Тип графика" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="101.0" />
+            <ComboBox fx:id="comboBuildType" layoutX="22.0" layoutY="128.0" prefHeight="26.0" prefWidth="175.0" promptText="Метод построения" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="132.0" />
+            <ColorPicker fx:id="colorPicker" layoutX="22.0" layoutY="158.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="162.0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="labelInstrumentName" layoutX="97.0" layoutY="338.0" prefHeight="26.0" prefWidth="116.0" textAlignment="CENTER" AnchorPane.leftAnchor="97.0" AnchorPane.topAnchor="338.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelInstrumentName" layoutX="63.0" layoutY="300.0" prefHeight="30.0" prefWidth="125.0" AnchorPane.leftAnchor="63.0" AnchorPane.topAnchor="300.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
+</AnchorPane>

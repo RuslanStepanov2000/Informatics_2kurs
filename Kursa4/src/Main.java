@@ -8,7 +8,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        Scene root = new Scene(FXMLLoader.load(getClass().getResource("Scene.fxml")));
+        Scene root = new Scene(FXMLLoader.load(getClass().getResource("loginwindow/Scene.fxml")));
         primaryStage.setScene(root);
         primaryStage.setTitle("Analyses of stocks");
         primaryStage.getMaxHeight();

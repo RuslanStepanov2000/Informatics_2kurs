@@ -1,3 +1,5 @@
+import javafx.scene.paint.Color;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -7,13 +9,23 @@ import java.io.IOException;
 public class DataManager {
     /**
      * Все файлы изначально загружаются со всеми столбцами, предлагамыми, финамом.
-     * Название инструмента, период(в минутах), дата(гггг-мм-чч), время(чч-мм-сс), цена открытия, ц.закрытия,
+     * Название инструмента, период(в минутах), дата(гггг-мм-чч), время(чч-мм-сс), цена открытия,
      * максимальная ц., минимальная ц., ц.закрытия, объем торгов
      */
     static File inputfile;
     static String instrument;
+    double[] open;
+    double[] high;
+    double[] low;
+    double[] close;
+    double[] volume;
 
     public static String getInstrument() {
+        try {
+            readInput();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return instrument;
     }
 
@@ -27,11 +39,6 @@ public class DataManager {
         BufferedReader br = new BufferedReader(new FileReader(inputfile));
         instrument=br.readLine().split(";",0)[0];
         instrument=br.readLine().split(";",0)[0];
-
-        while ((line = br.readLine()) != null) {
-            String[] cols = line.split(";");
-            System.out.println("Coulmn 4= " + cols[4] + " , Column 5=" + cols[5]);
-        }
 
     }
     public static double[] mnk(double[] y){
@@ -100,6 +107,73 @@ public class DataManager {
         r[2] = det3/det;
 
         return r;
+    }
+
+    public static double[] getdata(int trigger) throws IOException {
+        /**
+         * Метод возвращает массив по заданному параметру
+         * @param trigger 1-цены открытия
+         *                2-максимальные цены
+         *                3-минимальные цены
+         *                4-цены закрытия
+         *                5-объем торгов
+         *                6-дата, соотвествующая каждому из предыдущих параметров
+         */
+
+        //Подсчет количества строк в файле
+        String line;
+        BufferedReader br = new BufferedReader(new FileReader(instrument));
+        int i = 0;
+        line = br.readLine();
+        while ((line = br.readLine()) != null) {
+            i++;
+        }
+        double[] open = new double[i];
+        double[] high = new double[i];
+        double[] low = new double[i];
+        double[] close = new double[i];
+        double[] volume = new double[i];
+        //Запись в массивы данных с файла по стобцам
+        BufferedReader br2 = new BufferedReader(new FileReader(instrument));
+        for (int i2=0; i2<0; i2++)
+        line = br2.readLine();
+
+        while ((line = br.readLine()) != null) {
+            String[] cols = line.split(";");
+            open[i]= Double.parseDouble(cols[5]);
+            high[i]= Double.parseDouble(cols[6]);
+            low[i]= Double.parseDouble(cols[7]);
+            close[i]= Double.parseDouble(cols[8]);
+            volume[i]= Double.parseDouble(cols[9]);
+            i++;
+        }
+        switch(trigger)
+
+    {
+        case (1): {
+            return open;
+        }
+        case (2): {
+            return high;
+        }
+        case (3): {
+            return low;
+        }
+        case (4): {
+            return close;
+        }
+        case (5): {
+            return volume;
+        }
+    }
+        return null;
+}
+    public static String colorToString(Color color){
+        String rgb = String.format("%d, %d, %d",
+                (int) (color.getRed() * 255),
+                (int) (color.getGreen() * 255),
+                (int) (color.getBlue() * 255));
+        return rgb;
     }
 
 }

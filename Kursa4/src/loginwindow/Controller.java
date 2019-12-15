@@ -107,7 +107,7 @@ public class Controller {
             Stage stage = new Stage();
             Parent root = null;
             try {
-                root = FXMLLoader.load(getClass().getResource("WorkingSpace.fxml"));
+                root = FXMLLoader.load(getClass().getResource("workingSpace/WorkingSpace.fxml"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
