@@ -100,7 +100,8 @@ public class Controller {
         user.setPassword(loginPassword.getText());
 
         if (dbm.userLogin(user)) {
-            dbm.logUserLogin(user);
+            user.setId(DBManager.getUserId(user));
+            DBManager.logUserLogin(user);
             Node source = (Node) event.getSource();
             Stage stageThis = (Stage) source.getScene().getWindow();
             stageThis.close();

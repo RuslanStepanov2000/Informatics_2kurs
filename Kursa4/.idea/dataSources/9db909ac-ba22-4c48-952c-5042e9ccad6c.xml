@@ -1169,19 +1169,16 @@
     <column id="292" parent="282" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="293" parent="282" name="user_loginDate">
       <Position>2</Position>
-      <DataType>date|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(70)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="294" parent="282" name="user_exitDate">
       <Position>3</Position>
-      <DataType>date|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(70)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="295" parent="282" name="user_id_UNIQUE">

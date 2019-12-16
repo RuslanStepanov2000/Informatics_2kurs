@@ -84,32 +84,29 @@ public class DBManager  {
 
     }
 
-    public String getUserId(User user) throws SQLException {
+    public static String getUserId(User user) throws SQLException {
         String id;
         dbConnection();
         String sqlGetId = "select * " +
                 "FROM kursa4.user " +
                 "where user_login=?";
-        PreparedStatement statementGetId = getConn().prepareStatement(sqlGetId);
-
-        statementGetId.setString(1,user.getLogin());
-
-        ResultSet rs = statementGetId.executeQuery(sqlGetId);
+        PreparedStatement statement = conn.prepareStatement(sqlGetId);
+        statement.setString(1, user.getLogin());
+        ResultSet rs = statement.executeQuery();
         rs.next();
-
-        System.out.println(rs.getString(1));
         id=rs.getString(1);
 
         conn.close();
         return id;
     }
 
-    public void  logUserLogin(User user) throws SQLException {
+    public static void  logUserLogin(User user) throws SQLException {
+        System.out.println("logUserLogin()");
         String id=user.getId();
         Date date = new Date();
         dbConnection();
-        String sql = "UPDATE kursa4.user_activity SET user_loginDate=? WHERE user_id=? ";
-        PreparedStatement statement = getConn().prepareStatement(sql);
+        String sql = "INSERT INTO kursa4.user_activity  (user_loginDate,user_id) VALUES(?,?)";
+        PreparedStatement statement = conn.prepareStatement(sql);
         statement.setString(1, date.toString());
         statement.setString(2, user.getId());
         statement.executeUpdate();
