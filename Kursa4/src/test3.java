@@ -9,9 +9,7 @@ public class test3 {
 
     public static void main(String[] args) throws IOException {
 
-        String urlString = "http://export.finam.ru/POLY_170620_170623.txt?market=1&em=175924&code=POLY&apply=0&df=20&mf=5&yf=2017&from=20.06.2017&dt=23&" +
-                "mt=5&yt=2017&to=23.06.2017&p=8&f=POLY_170620_170623&e=.txt&cn=POLY&dtf=1&tmf=1&" +
-                "MSOR=1&mstime=on&mstimever=1&sep=1&sep2=1&datf=1&at=1";
+        String urlString = "http://export.finam.ru/GAZP_191119_191119.txt?market=1&em=16842&code=GAZP&apply=0&df=19&mf=10&yf=2019&from=19.11.2019&dt=19&mt=10&yt=2019&to=19.11.2019&p=2&f=GAZP_191119_191119&e=.txt&cn=GAZP&dtf=1&tmf=1&MSOR=1&mstime=on&mstimever=1&sep=1&sep2=1&datf=1&at=1";
 
         URLConnection conn = new URL(urlString).openConnection();
         conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");

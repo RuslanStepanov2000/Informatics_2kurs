@@ -45,13 +45,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="kursa4: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="kursa4: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -63,7 +56,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/workingSpace/ControllerWorkingSpace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-499">
+            <state relative-caret-position="323">
               <caret line="101" column="45" selection-start-line="101" selection-start-column="45" selection-end-line="101" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -77,10 +70,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/loginwindow/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="113" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="254">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
               <folding>
-                <element signature="method#buttonRegisterComplete#0;class#Controller#0" />
+                <element signature="method#buttonBackRegistration#0;class#Controller#0" />
+                <element signature="method#buttonBackLogin#0;class#Controller#0" />
+                <element signature="method#initialize#0;class#Controller#0" />
+                <element signature="method#loginButton#0;class#Controller#0" />
               </folding>
             </state>
           </provider>
@@ -89,93 +85,51 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="152">
+              <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
               <folding>
-                <element signature="e#453#454#0" expanded="true" />
-                <element signature="e#485#486#0" expanded="true" />
-                <element signature="e#533#534#0" expanded="true" />
-                <element signature="e#575#576#0" expanded="true" />
-                <element signature="e#608#609#0" expanded="true" />
-                <element signature="e#639#640#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-                <element signature="e#725#726#0" expanded="true" />
-                <element signature="e#758#759#0" expanded="true" />
-                <element signature="e#787#788#0" expanded="true" />
-                <element signature="e#832#833#0" expanded="true" />
-                <element signature="e#868#869#0" expanded="true" />
-                <element signature="e#905#906#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1046#1047#0" expanded="true" />
-                <element signature="e#1160#1161#0" expanded="true" />
-                <element signature="e#1200#1201#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="134" column="40" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#readInput#0;class#DataManager#0" />
-                <element signature="method#mnk#0;class#DataManager#0" />
-                <element signature="method#sqrtStat#0;class#DataManager#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://E:/Downloads/ChartController.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="453" column="21" selection-start-line="453" selection-start-column="14" selection-end-line="453" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://E:/Downloads/dataValues.class">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testclass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="42" column="20" selection-start-line="12" selection-start-column="7" selection-end-line="42" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#448#449#0" expanded="true" />
+                <element signature="e#473#474#0" expanded="true" />
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#1535#1536#0" expanded="true" />
+                <element signature="e#1563#1564#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test3.java">
+        <entry file="file://$PROJECT_DIR$/src/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="248">
+              <caret line="94" column="42" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#getConn#0;class#DBManager#0" />
+                <element signature="method#dbConnection#0;class#DBManager#0" />
+                <element signature="method#newuserPush#0;class#DBManager#0" />
+                <element signature="method#userLogin#0;class#DBManager#0" />
+                <element signature="method#logUserLogin#0;class#DBManager#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DownloadFromWeb.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-34">
+              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -193,8 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>registerWindow</find>
-      <find>register</find>
       <find>Complete</find>
       <find>Pane</find>
       <find>loginPane</find>
@@ -219,6 +171,12 @@
       <find>series</find>
       <find>getdata</find>
       <find>s</find>
+      <find>'</find>
+      <find />
+      <find>)</find>
+      <find>ResultSet rs = st.executeQuery(&quot;select * from users&quot;);</find>
+      <find>setUserid</find>
+      <find>setU</find>
     </findStrings>
     <replaceStrings>
       <replace>registerWindow</replace>
@@ -227,6 +185,7 @@
       <replace>typeMark</replace>
       <replace>XYChart.Data</replace>
       <replace>i</replace>
+      <replace>String</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -242,22 +201,24 @@
         <option value="$PROJECT_DIR$/src/Registration.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9db909ac-ba22-4c48-952c-5042e9ccad6c/console.sql" />
-        <option value="$PROJECT_DIR$/src/User.java" />
         <option value="$PROJECT_DIR$/src/StartingWorkingSpace.java" />
         <option value="$PROJECT_DIR$/src/Controller.java" />
         <option value="$PROJECT_DIR$/src/WorkingSpace.fxml" />
         <option value="$PROJECT_DIR$/src/ControllerWorkingSpace.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/DBManager.java" />
-        <option value="$PROJECT_DIR$/src/loginwindow/Controller.java" />
         <option value="$PROJECT_DIR$/src/Visualization.java" />
         <option value="$PROJECT_DIR$/src/workingSpace/GraphController.java" />
         <option value="$PROJECT_DIR$/src/workingSpace/WorkingSpace.fxml" />
-        <option value="$PROJECT_DIR$/src/test.java" />
         <option value="$PROJECT_DIR$/src/DataManager.java" />
         <option value="$PROJECT_DIR$/src/workingSpace/ControllerWorkingSpace.java" />
         <option value="$PROJECT_DIR$/src/testclass.java" />
+        <option value="$PROJECT_DIR$/src/DownloadFromWeb.java" />
         <option value="$PROJECT_DIR$/src/test3.java" />
+        <option value="$PROJECT_DIR$/src/User.java" />
+        <option value="$PROJECT_DIR$/src/loginwindow/Controller.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9db909ac-ba22-4c48-952c-5042e9ccad6c/console_1.sql" />
+        <option value="$PROJECT_DIR$/src/test.java" />
+        <option value="$PROJECT_DIR$/src/DBManager.java" />
       </list>
     </option>
   </component>
@@ -273,7 +234,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="710" />
     <option name="y" value="150" />
     <option name="width" value="1615" />
@@ -304,6 +265,12 @@
             </path>
             <path>
               <item name="Kursa4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Kursa4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="loginwindow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Kursa4" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -318,8 +285,8 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576444720434" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576533231865" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -347,7 +314,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test3">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Kursa4" />
@@ -391,10 +358,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.test3" />
         <item itemvalue="Application.testclass" />
-        <item itemvalue="Application.test" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.test (1)" />
       </list>
     </recent_temporary>
@@ -443,12 +410,13 @@
       <workItem from="1575968176511" duration="3477000" />
       <workItem from="1576044926711" duration="10358000" />
       <workItem from="1576328126054" duration="25775000" />
-      <workItem from="1576438186602" duration="6342000" />
+      <workItem from="1576438186602" duration="9365000" />
+      <workItem from="1576527578823" duration="5727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133376000" />
+    <option name="totallyTimeSpent" value="142126000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -460,10 +428,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49857953" visible="true" weight="0.18817204" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49857953" visible="true" weight="0.19086021" />
       <window_info id="Structure" order="1" sideWeight="0.50142044" side_tool="true" weight="0.25672042" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -472,7 +440,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50142044" side_tool="true" weight="0.25672042" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28835228" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2840909" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914772" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -482,7 +450,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32954547" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="12" visible="true" weight="0.32954547" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32954547" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.30823863" />
       <window_info anchor="bottom" id="Duplicate detector" order="14" weight="0.32954547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -493,7 +461,7 @@
       <window_info anchor="right" id="Maven" order="5" weight="0.3293011" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" weight="0.18682796" />
+      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.18682796" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32997313" />
     </layout>
   </component>
@@ -505,31 +473,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../123/VkUsers/src/Perceptron3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="11" lean-forward="true" selection-end-line="196" />
-          <folding>
-            <element signature="e#5934#5935#0" expanded="true" />
-            <element signature="e#5985#5986#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../zadanie3 09.10.2019/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/regex/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="1026" column="26" selection-start-line="1026" selection-start-column="26" selection-end-line="1026" selection-end-column="26" />
-          <folding>
-            <element signature="e#48487#48488#0" expanded="true" />
-            <element signature="e#48531#48532#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-565">
@@ -684,9 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9db909ac-ba22-4c48-952c-5042e9ccad6c/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="das://9db909ac-ba22-4c48-952c-5042e9ccad6c/schema/kursa4/table/user.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
@@ -709,13 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="304" column="25" selection-start-line="304" selection-start-column="25" selection-end-line="304" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9db909ac-ba22-4c48-952c-5042e9ccad6c/schema/kursa4/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -761,20 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="85" column="59" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#dbConnection#0;class#DBManager#0" />
-            <element signature="method#newuserPush#0;class#DBManager#0" />
-            <element signature="method#userLogin#0;class#DBManager#0" />
-            <element signature="method#start#0;class#DBManager#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Visualization.java" />
     <entry file="file://$PROJECT_DIR$/src/workingSpace/WorkingSpace.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -791,43 +710,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/loginwindow/Controller.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/net/www/protocol/http/HttpURLConnection.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
-          <folding>
-            <element signature="method#buttonRegisterComplete#0;class#Controller#0" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1364" selection-start-line="1364" selection-end-line="1364" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/User.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/net/URLConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#905#906#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1160#1161#0" expanded="true" />
-            <element signature="e#1200#1201#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="158">
+          <caret line="869" selection-start-line="869" selection-end-line="869" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/testclass.java" />
     <entry file="file://$PROJECT_DIR$/src/DataManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1054">
@@ -841,16 +738,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/net/www/protocol/http/HttpURLConnection.class">
+    <entry file="file://E:/Downloads/ChartController.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1364" selection-start-line="1364" selection-end-line="1364" />
+        <state relative-caret-position="7650">
+          <caret line="453" column="21" selection-start-line="453" selection-start-column="14" selection-end-line="453" selection-end-column="21" />
         </state>
       </provider>
     </entry>
+    <entry file="file://E:/Downloads/dataValues.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/workingSpace/ControllerWorkingSpace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-499">
+        <state relative-caret-position="323">
           <caret line="101" column="45" selection-start-line="101" selection-start-column="45" selection-end-line="101" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -860,49 +760,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Downloads/ChartController.class">
+    <entry file="file://$PROJECT_DIR$/src/test3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="453" column="21" selection-start-line="453" selection-start-column="14" selection-end-line="453" selection-end-column="21" />
+        <state relative-caret-position="166">
+          <caret line="11" column="285" selection-start-line="11" selection-start-column="285" selection-end-line="11" selection-end-column="285" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Downloads/dataValues.class">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="das://9db909ac-ba22-4c48-952c-5042e9ccad6c/schema/kursa4/table/user_results">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9db909ac-ba22-4c48-952c-5042e9ccad6c/schema/kursa4/table/user_activity">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9db909ac-ba22-4c48-952c-5042e9ccad6c/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="44" selection-start-column="44" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DownloadFromWeb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9db909ac-ba22-4c48-952c-5042e9ccad6c/schema/kursa4/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state relative-caret-position="238">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#1535#1536#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testclass.java">
+    <entry file="file://$PROJECT_DIR$/src/loginwindow/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="42" column="20" selection-start-line="12" selection-start-column="7" selection-end-line="42" selection-end-column="20" />
+        <state relative-caret-position="254">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#buttonBackRegistration#0;class#Controller#0" />
+            <element signature="method#buttonBackLogin#0;class#Controller#0" />
+            <element signature="method#initialize#0;class#Controller#0" />
+            <element signature="method#loginButton#0;class#Controller#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/net/URLConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="869" selection-start-line="869" selection-end-line="869" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="248">
+          <caret line="94" column="42" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getConn#0;class#DBManager#0" />
+            <element signature="method#dbConnection#0;class#DBManager#0" />
+            <element signature="method#newuserPush#0;class#DBManager#0" />
+            <element signature="method#userLogin#0;class#DBManager#0" />
+            <element signature="method#logUserLogin#0;class#DBManager#0" />
           </folding>
         </state>
       </provider>

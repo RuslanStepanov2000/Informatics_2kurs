@@ -14,6 +14,16 @@ public class User {
     private Date dateExit;
     private boolean result;
     private int resultNumeric;
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
 
     public Date getDateLogin() {
         return dateLogin;
@@ -55,15 +65,6 @@ public class User {
         this.filePath = filePath;
     }
 
-    public int getUserid() {
-        return userid;
-    }
-
-    public void setUserid(int userid) {
-        this.userid = userid;
-    }
-
-    private int userid;
 
     public String getLogin() {
         return login;

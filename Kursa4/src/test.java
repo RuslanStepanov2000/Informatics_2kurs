@@ -1,41 +1,22 @@
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
-import javafx.stage.Stage;
+import java.sql.*;
 
 
-public class test extends Application {
+public class test  {
 
-    @Override public void start(Stage stage) {
-        stage.setTitle("Line Chart Sample");
-        final NumberAxis xAxis = new NumberAxis();
-        final NumberAxis yAxis = new NumberAxis();
-        xAxis.setLabel("Number of Month");
-        final LineChart<Number,Number> lineChart =
-                new LineChart<Number,Number>(xAxis,yAxis);
+    public static void main(String[] args) throws SQLException {
+        Connection conn;
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Ruslan2411");
+            System.out.println("Database Connection Established...");
+        String sql = "select * " +
+                "FROM kursa4.user " +
+                "where user_login=?";
+        PreparedStatement statement = conn.prepareStatement(sql);
 
-        lineChart.setTitle("Stock Monitoring");
-        //defining a series
-        XYChart.Series series = new XYChart.Series();
-        series.setName("My portfolio");
-        //populating the series with data
+        statement.setString(1, "w");
 
+        ResultSet rs = statement.executeQuery();
+        rs.next();
 
-            lineChart.getData().clear();
-            for (int i = 0; i < 10; i++) {
-                series.getData().add(new XYChart.Data(i, i*5));
-            }
-            lineChart.getData().add(series);
-
-
-        Scene scene  = new Scene(lineChart,800,600);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
+        System.out.println(rs.getString(1));
     }
 }

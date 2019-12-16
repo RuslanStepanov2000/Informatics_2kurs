@@ -1,13 +1,9 @@
 //"jdbc:MySQL://localhost:3306", "root", "Ruslan2411"
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
 import java.sql.*;
+import java.util.Date;
 
-public class DBManager extends Application {
+public class DBManager  {
     /**
      * Класс взаимодействия с базой даных
      */
@@ -46,6 +42,13 @@ public class DBManager extends Application {
         statement.setString(1, user.getLogin());
         statement.setString(2, user.getPassword());
         statement.executeUpdate();
+
+        //Заполнил id в таблице с логами
+        user.setId(getUserId(user));
+        String sql2="INSERT INTO kursa4.user_activity (user_id) VALUES (?)";
+        PreparedStatement statement2 = getConn().prepareStatement(sql2);
+        statement2.setString(1,user.getId());
+        statement2.executeUpdate();
         conn.close();
     }
 
@@ -69,7 +72,6 @@ public class DBManager extends Application {
         ResultSet rs = statement.executeQuery();
         //В случае ошибки
         if (rs.next()) {
-            user.setUserid(rs.getInt(1));
             System.out.println("ДОБРО ПОЖАЛОВАТЬ");
             conn.close();
             return true;
@@ -82,13 +84,41 @@ public class DBManager extends Application {
 
     }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Scene root2 = new Scene(FXMLLoader.load(getClass().getResource("workingSpace/WorkingSpace.fxml")));
-        primaryStage.setScene(root2);
-        primaryStage.setTitle("Analyses of stocks");
-        primaryStage.show();
+    public String getUserId(User user) throws SQLException {
+        String id;
+        dbConnection();
+        String sqlGetId = "select * " +
+                "FROM kursa4.user " +
+                "where user_login=?";
+        PreparedStatement statementGetId = getConn().prepareStatement(sqlGetId);
+
+        statementGetId.setString(1,user.getLogin());
+
+        ResultSet rs = statementGetId.executeQuery(sqlGetId);
+        rs.next();
+
+        System.out.println(rs.getString(1));
+        id=rs.getString(1);
+
+        conn.close();
+        return id;
     }
+
+    public void  logUserLogin(User user) throws SQLException {
+        String id=user.getId();
+        Date date = new Date();
+        dbConnection();
+        String sql = "UPDATE kursa4.user_activity SET user_loginDate=? WHERE user_id=? ";
+        PreparedStatement statement = getConn().prepareStatement(sql);
+        statement.setString(1, date.toString());
+        statement.setString(2, user.getId());
+        statement.executeUpdate();
+        conn.close();
+
+
+    }
+
+
 }
 
 
