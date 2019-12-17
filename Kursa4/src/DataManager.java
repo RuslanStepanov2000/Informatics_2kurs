@@ -1,9 +1,9 @@
-import javafx.scene.paint.Color;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.ParseException;
+import java.util.ArrayList;
 
 
 public class DataManager {
@@ -19,6 +19,7 @@ public class DataManager {
     double[] low;
     double[] close;
     double[] volume;
+    double[] date;
 
     public static String getInstrument() {
         try {
@@ -109,7 +110,7 @@ public class DataManager {
         return r;
     }
 
-    public static double[] getdata(int trigger) throws IOException {
+    public static double[] getdata(int trigger) throws IOException, ParseException {
         /**
          * Метод возвращает массив по заданному параметру
          * @param trigger 1-цены открытия
@@ -117,34 +118,39 @@ public class DataManager {
          *                3-минимальные цены
          *                4-цены закрытия
          *                5-объем торгов
-         *                6-дата, соотвествующая каждому из предыдущих параметров
+         *                6-DOUBLE!!!! дата вида yyyymmdd в одном числе!!!! не забудь перевести в нормальный вид
+         *
          */
 
         //Подсчет количества строк в файле
         String line;
-        BufferedReader br = new BufferedReader(new FileReader(instrument));
+        BufferedReader br = new BufferedReader(new FileReader(inputfile));
         int i = 0;
         line = br.readLine();
         while ((line = br.readLine()) != null) {
             i++;
         }
+
+
+        //Болванки нужного размера для массивов данных
         double[] open = new double[i];
         double[] high = new double[i];
         double[] low = new double[i];
         double[] close = new double[i];
         double[] volume = new double[i];
-        //Запись в массивы данных с файла по стобцам
-        BufferedReader br2 = new BufferedReader(new FileReader(instrument));
-        for (int i2=0; i2<0; i2++)
-        line = br2.readLine();
 
-        while ((line = br.readLine()) != null) {
+
+        //Запись в массивы данных с файла по стобцам
+        BufferedReader br2 = new BufferedReader(new FileReader(inputfile));
+        i=0;
+        line = br2.readLine();
+        while ((line = br2.readLine()) != null) {
             String[] cols = line.split(";");
-            open[i]= Double.parseDouble(cols[5]);
-            high[i]= Double.parseDouble(cols[6]);
-            low[i]= Double.parseDouble(cols[7]);
-            close[i]= Double.parseDouble(cols[8]);
-            volume[i]= Double.parseDouble(cols[9]);
+            open[i]= Double.parseDouble(cols[4]);
+            high[i]= Double.parseDouble(cols[5]);
+            low[i]= Double.parseDouble(cols[6]);
+            close[i]= Double.parseDouble(cols[7]);
+            volume[i]= Double.parseDouble(cols[8]);
             i++;
         }
         switch(trigger)
@@ -168,12 +174,40 @@ public class DataManager {
     }
         return null;
 }
-    public static String colorToString(Color color){
-        String rgb = String.format("%d, %d, %d",
-                (int) (color.getRed() * 255),
-                (int) (color.getGreen() * 255),
-                (int) (color.getBlue() * 255));
-        return rgb;
+
+    public static String[] getdate() throws IOException {
+        String line;
+        BufferedReader br = new BufferedReader(new FileReader(inputfile));
+        int i = 0;
+        line = br.readLine();
+        while ((line = br.readLine()) != null) {
+            i++;
+        }
+        String[] date=new String[i];
+        BufferedReader br2 = new BufferedReader(new FileReader(inputfile));
+        i=0;
+        line = br2.readLine();
+        while ((line = br2.readLine()) != null) {
+            String[] cols = line.split(";");
+            date[i]=cols[2];
+            i++;
+        }
+        return date;
+    }
+
+    public static ArrayList<String> comboNameArrList() throws IOException {
+        ArrayList<String> list = new ArrayList<>();
+        String line;
+        BufferedReader br = new BufferedReader(new FileReader("ListingSecurityList.csv"));
+        int i = 0;
+        line = br.readLine();
+        while ((line = br.readLine()) != null) {
+            String cols[]=line.split(";");
+            list.add(cols[0]);
+
+            i++;
+        }
+        return list;
     }
 
 }
