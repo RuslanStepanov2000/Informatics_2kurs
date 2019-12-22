@@ -7,79 +7,96 @@ import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
 public class DownloadFromWeb {
-        public String getUrl(
+        public static String getUrl(
                 //  https://habr.com/ru/post/332700//
                 String code,
-                String year_start,
-                String month_start,
-                String day_start,
-                String year_end,
-                String month_end,
-                String day_end,
-                String e,
-                String market,
-                String em,
-                String p,
-                String yf,
-                String yt,
-                String dtf,
+                String[] from,
+                String[] to,
+                String em
+                /*String dtf,
                 String tmf,
                 String MSOR,
                 String mstimever,
                 String sep,
                 String sep2,
                 String datf,
-                String at,
-                String df,
-                String mf,
-                String dt,
-                String mt)
+                String at,*/
+                )
         {
+            String yf=from[0];
 
-            String url = "http://export.finam.ru/"+
-                    code+'_'+
+            String mf=null;
+            String mf2=from[1];
+            if(Integer.parseInt(from[1])<10) {
+                mf =String.valueOf(Integer.parseInt(from[1].substring(1))-1);
+            } else mf=String.valueOf(Integer.parseInt(from[1])-1);
+
+
+
+            String df=null;
+            String df2=from[2];
+            if(Integer.parseInt(from[2])<10) {
+                df =from[2].substring(1);
+            } else df=from[2];
+
+            String yt=to[0];
+
+            String mt=null;
+            String mt2=to[1];
+            if(Integer.parseInt(to[1])<10) {
+                mt =String.valueOf(Integer.parseInt(to[1].substring(1))-1);
+            } else mt=String.valueOf(Integer.parseInt(from[1]));
+
+            String dt=null;
+            String dt2=to[2];
+            if(Integer.parseInt(to[2])<10) {
+                dt =to[2].substring(1);
+            } else dt=to[2];
+
+            System.out.println(yf+mf2+df2+"      "+yt+mt2+dt2);
+            String url = "http://export.finam.ru/input"+code+".csv"+
+                    /*code+'_'+
                     year_start+
                     month_start+
                     day_start+'_'+
                     year_end+
                     month_end+
                     day_end+
-                    e+
-                    "?market="+market+
+                    e+*/
+                    "?market="+"1"+ //market+
                     "&em="+em+
                     "&code="+code+
-                    "&apply=0&df="+df+
+                    "&apply=0"+
+                    "&df="+df+
                     "&mf="+mf+
                     "&yf="+yf+
-                    "&from="+day_start+"."+month_start+"."+
-                    yf+
+                    "&from="+df2+"."+mf2+"."+yf+
                     "&dt="+dt+
                     "&mt="+mt+
                     "&yt="+yt+
-                    "&to="+day_end+"."+month_end+"."+
-                    yt+
-                    "&p="+p+
+                    "&to="+dt2+"."+mt2+"."+yt+
+                    "&p="+"8"+//p+
                     "&f="+code+"_"+
-                    year_start+
-                    month_start+
-                    day_start+"_"+
-                    year_end+
-                    month_end+
-                    day_end+
-                    "&e="+e+
+                    "&e="+".csv"+
                     "&cn="+code+
-                    "&dtf="+dtf+
-                    "&tmf="+tmf+
-                    "&MSOR="+MSOR+
-                    "&mstimever="+
-                    mstimever+
-                    "&sep="+sep+
-                    "&sep2="+sep2+
-                    "&datf="+datf+
-                    "&at="+at;
+                    "&dtf="+"1"+//dtf+
+                    "&tmf="+"1"+//tmf+
+                    "&MSOR="+"1"+//MSOR+
+                    "&mstime=on"+
+                    "&mstimever="+"1"+//mstimever+
+                    "&sep="+"3"+//sep+
+                    "&sep2="+"1"+//sep2+
+                    "&datf="+"1"+//datf+
+                    "&at="+"1";//at
+            System.out.println("Привет из geturl,  ссылка сгенерирована");
+            System.out.println(url);
             return url;
+
         }
-        public File file(String urlString) throws IOException {
+        public static File getfile(String urlString) throws IOException {
+            /**
+             * Скачивание файла с финама
+             */
 
             URLConnection conn = new URL(urlString).openConnection();
             conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");
@@ -105,6 +122,7 @@ public class DownloadFromWeb {
             fos.close();
 
             File file = new File("input.csv");
+            System.out.println("Привет из getfile, файл скачан");
             return file;
         }
 

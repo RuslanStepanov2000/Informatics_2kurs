@@ -20,7 +20,7 @@ public class DBManager  {
         /**
          * Непосредственно подключение к БД
          */
-        System.out.println("nn***** MySQL JDBC Connection Testing *****");
+        System.out.println("***** MySQL JDBC Connection Testing *****");
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost/?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "Ruslan2411");
             System.out.println("Database Connection Established...");
@@ -92,7 +92,7 @@ public class DBManager  {
                 "where user_login=?";
         PreparedStatement statement = conn.prepareStatement(sqlGetId);
         statement.setString(1, user.getLogin());
-        ResultSet rs = statement.executeQuery();
+            ResultSet rs = statement.executeQuery();
         rs.next();
         id=rs.getString(1);
 

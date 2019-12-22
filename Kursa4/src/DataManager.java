@@ -118,8 +118,6 @@ public class DataManager {
          *                3-минимальные цены
          *                4-цены закрытия
          *                5-объем торгов
-         *                6-DOUBLE!!!! дата вида yyyymmdd в одном числе!!!! не забудь перевести в нормальный вид
-         *
          */
 
         //Подсчет количества строк в файле
@@ -151,6 +149,7 @@ public class DataManager {
             low[i]= Double.parseDouble(cols[6]);
             close[i]= Double.parseDouble(cols[7]);
             volume[i]= Double.parseDouble(cols[8]);
+
             i++;
         }
         switch(trigger)
@@ -172,10 +171,15 @@ public class DataManager {
             return volume;
         }
     }
+        br.close();
+        br2.close();
         return null;
 }
 
     public static String[] getdate() throws IOException {
+        /**
+         * Считывает дату из файла
+         */
         String line;
         BufferedReader br = new BufferedReader(new FileReader(inputfile));
         int i = 0;
@@ -196,6 +200,9 @@ public class DataManager {
     }
 
     public static ArrayList<String> comboNameArrList() throws IOException {
+        /**
+         * Метод заполняет комбо бокс при выборе инструментов для загрузки из инета
+         */
         ArrayList<String> list = new ArrayList<>();
         String line;
         BufferedReader br = new BufferedReader(new FileReader("ListingSecurityList.csv"));
